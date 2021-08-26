@@ -1,0 +1,11 @@
+{
+  "layout": "hello/layout",
+  "css": "/static/abc.css",
+  "js": [
+    "/static/abc.js",
+    "@/static/def.js"
+  ],
+  "title": "this title is json",
+  "keywords": "this keywords is json",
+  "description": "this description is json"
+}
