@@ -74,8 +74,8 @@ module.exports = async (hd) => {
     // 超时设置，默认15秒
     timeout: 15000,
 
-    // 数据返回类型，默认full
-    // full: 全部返回，{"status": true, "code": 200, "data": "HTML", "ms": 62}
+    // 数据返回类型，默认full， HTML是String或Buffer
+    // full: 全部返回，{"status": true, "code": 200, "data": HTML, "ms": 62}
     // text：HTML
     // json: JSON.parse("HTML")
     dataType: 'full',
