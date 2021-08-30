@@ -78,7 +78,10 @@ module.exports = async (hd) => {
     // full: 全部返回，{"status": true, "code": 200, "data": "HTML", "ms": 62}
     // text：HTML
     // json: JSON.parse("HTML")
-    dataType: 'full'
+    dataType: 'full',
+
+    // 获取二进制，默认为false，如果获取图片之类的须设置为true
+    // buffer: false,
   };
 
   let info = await hd.http(
