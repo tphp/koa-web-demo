@@ -2,12 +2,9 @@
  * 入口文，hd、data和files都可以不设置
  * 如 module.exports = async () => {}; 也是可以的
  * data和files是通过 require("formidable") 实现
- * hd: 主调用函数
- * @param {*} hd 
- * data: form-data、x-www-form-urlencoded和JSON数据会自动转化为该对象
- * @param {*} data 
- * files: 只有在form-data类型中产生
- * @param {*} files 
+ * @param {*} hd 主调用函数
+ * @param {*} data form-data、x-www-form-urlencoded和JSON数据会自动转化为该对象
+ * @param {*} files 只有在form-data类型中产生
  * @returns 
  */
 module.exports = async (hd, data, files) => {
