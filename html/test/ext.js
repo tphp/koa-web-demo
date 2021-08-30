@@ -35,6 +35,30 @@ module.exports.jpg = (hd) => {
 };
 
 /**
+ * 获取其他网页图片并展示
+ * 访问： http://localhost:3000/test/ext.png
+ * @param {*} hd 
+ * @returns 
+ */
+ module.exports.png = async (hd) => {
+  let info = await hd.http({
+    url: "https://www.baidu.com/img/flexible/logo/pc/result.png",
+    buffer: true
+  });
+
+  // 获取图片成功
+  if (info.code === 200) {
+    return Buffer.from(info.data);
+  }
+
+  // 获取图片失败
+  // 修改掉默认的 image/png
+  hd.ctx.type = "text/plain";
+  
+  return "无效图片!";
+};
+
+/**
  * css文件预览
  * 头文件会自动设置：Content-Type: text/css; charset=utf-8
  * 页面不会缓存
