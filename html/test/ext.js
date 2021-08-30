@@ -56,5 +56,9 @@ module.exports.js = hd => {
   
   // 注意：一般不使用 hd.read() 读取本文件 /html/test/ext.js
 
+  // 渲染 /html/test/ext.x.js 文件，默认使用nunjucks模板引擎
+  // read是读取二进制文件，render是强制转换成字符串
+  // return hd.render({ test: "Hello Test!" }, 'x.js');
+
   return `console.log('打印测试');`;
 };
