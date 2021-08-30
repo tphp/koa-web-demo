@@ -28,6 +28,11 @@ module.exports = async (hd, data, files) => {
   // json: application/json
   // console.log(hd.ctx.app.info); 
 
+  // 获取项目中文件路径: /项目路径/hello.js
+  // console.log(hd.path("hello.js"));
+  // 获取视图中文件路径: /项目路径/html/hello.js
+  // console.log(hd.viewPath("hello.js"));
+
   // 设置模板页面中函数（nunjucks模板）
   hd.view('sayHello', "hello hello!");
   // 多函数设置
