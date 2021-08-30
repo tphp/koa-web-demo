@@ -81,6 +81,7 @@ module.exports = async (hd) => {
     dataType: 'full',
 
     // 获取二进制，默认为false，如果获取图片之类的须设置为true
+    // 当设置为true时对dataType: "json" 无效
     // buffer: false,
   };
 
