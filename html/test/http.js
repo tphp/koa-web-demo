@@ -83,6 +83,12 @@ module.exports = async (hd) => {
     // 获取二进制，默认为false，如果获取图片之类的须设置为true
     // 当设置为true时对dataType: "json" 无效
     // buffer: false,
+
+    // 数据结果调试
+    // index: 请求下标，在httpAll下效果显著
+    // data: 页面信息
+    // debug: (index, data) => {},
+    // debug: async (index, data) => {},
   };
 
   let info = await hd.http(
