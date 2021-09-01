@@ -51,7 +51,27 @@ app.use(
       // extTypes: {
       //   // 例如 /hello/world.txt 的设置 Content-Type："text/plan"
       //   txt: "text/plan"
-      // }
+      // },
+
+      // 扩展页面执行后回调
+      extCalls: {
+        // 访问： http://localhost:3000/任意路径.sh
+        // 同步模式
+        // extData: 调用任意路径下的扩展页面数据
+        sh: (extData, hd, data, files) => {
+          // 优先级高于 extTypes 配置
+          hd.ctx.type = 'text/plain';
+
+          return extData;
+        },
+
+        // 访问： http://localhost:3000/任意路径
+        // 异步模式
+        // 默认页面 htm、html和无扩展
+        // html: async () => {
+        //   return "hello world!";
+        // }
+      },
 
       // 如果不习惯默认的nunjucks模板引擎， 可以使用render进行重设
       // template: 模板页面源码
@@ -75,7 +95,7 @@ app.use(
       //     return error['message'];
       //   }
       //   return html;
-      // }
+      // },
     }
   )
 );
