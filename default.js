@@ -54,7 +54,7 @@ app.use(
           ":90": "path",
         
           // :90 权重高于 :{path}
-          ":{path}": "new/path",
+          // ":{path}": "new/path",
         },
 
         // 默认解析路径，不支持变量设置，如: {abc}/tpl
