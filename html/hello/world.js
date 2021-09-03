@@ -10,6 +10,8 @@
 module.exports = async (hd, data, files) => {
 
   // hd.ctx.body = '设置了就只会显示这一段';
+
+  // console.log(hd.isPost()); // 判断是否是POST提交
   
   // console.log(hd.ctx.query); // url 传递的参数
   // console.log(hd.ctx.header); // http 头文件
